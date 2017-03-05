@@ -16,7 +16,7 @@ public class GUI {
 		
 		
 		main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		main.setSize(500, 300);
+		main.setSize(600, 400);
 		main.setLocationRelativeTo(null);
 		main.setVisible(true);
 		
@@ -36,6 +36,12 @@ public class GUI {
 			main.revalidate();
 			main.repaint();
 			System.out.println("GCD added");
+		} else if(panelName.equals("LCM")) {
+				main.getContentPane().removeAll();
+				main.add(new panel_lcm());
+				main.revalidate();
+				main.repaint();
+				System.out.println("LCM added");
 		}
 		
 		

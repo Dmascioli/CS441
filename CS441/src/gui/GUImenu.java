@@ -16,7 +16,7 @@ public class GUImenu {
 	private JMenu compute = new JMenu("Compute");
 	private JMenuItem menu_isPrime = new JMenuItem("*Check Prime");
 	private JMenuItem menu_gcd = new JMenuItem("*GCD");
-	private JMenuItem menu_lcm = new JMenuItem("LCM");
+	private JMenuItem menu_lcm = new JMenuItem("*LCM");
 	private JMenuItem menu_primeFact = new JMenuItem("Prime Factorization");
 	private JMenuItem menu_baseConvert = new JMenuItem("Base Conversion");
 	private JMenuItem menu_euclid = new JMenuItem("Euclid's Algorithm");
@@ -43,7 +43,11 @@ public class GUImenu {
 				GUI.setPanel("GCD");
 			}
 		});
-		
+		menu_lcm.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				GUI.setPanel("LCM");
+			}
+		});
 		compute.add(menu_baseConvert);
 		compute.add(menu_congru);
 		compute.add(menu_euclid);
