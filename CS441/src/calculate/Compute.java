@@ -5,13 +5,19 @@ public class Compute {
 	public static int gcd(int a,int b)
 	{
 		int gcd = 1;
-		if(a > b)
+		if(a >= b)
 		{
-			for(int i = gcd; i < a; i++)
+			for(int i = a; i > gcd; i--)
 				if(a%i == 0)
-				{
-					
-				}
+					if(b%i == 0)
+						return i;
+		}
+		else
+		{
+			for(int i = b; i > gcd; i--)
+				if(b%i == 0)
+					if(a%i == 0)
+						return i;
 		}
 		return gcd;
 	}
