@@ -23,8 +23,21 @@ public class Compute {
 	}
 	public static int lcm(int a,int b)
 	{
-		
-		return 0;
+		if(a > b)
+		{
+			for(int i = b; i <= a*b; i++)
+			{
+				if(i%a == 0 && i%b == 0)
+					return i;	
+			}
+		}
+		else
+			for(int i = a; i <= a*b; i++)
+			{
+				if(i%a == 0 && i%b == 0)
+					return i;
+			}
+		return a*b;
 	}
 	public static int[] primeFactorization(int a)
 	{
